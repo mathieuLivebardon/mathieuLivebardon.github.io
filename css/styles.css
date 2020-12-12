@@ -5390,10 +5390,12 @@ a.close.disabled {
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
+  padding-left:10%;
+  padding-right:10% !important;
 }
 
 .modal {
-  position: fixed;
+  position: fixed; 	
   top: 0;
   left: 0;
   z-index: 1050;
