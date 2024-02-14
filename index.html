@@ -96,11 +96,11 @@
     </header>
 
     <script>
-      includeHTML("./html/portfolio-grid.html");
-      includeHTML("./html/CV.html");
-      includeHTML("./html/modals.html");
-      includeHTML("./html/footer.html");
-      includeHTML("./html/contact.html");
+      includeHTML("./html/portfolio-grid.html")
+        .then(includeHTML("./html/CV.html"))
+        .then(includeHTML("./html/modals.html"))
+        .then(includeHTML("./html/contact.html"))
+        .then(includeHTML("./html/footer.html"));
     </script>
 
     <!-- Bootstrap core JS-->
