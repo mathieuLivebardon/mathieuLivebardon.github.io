@@ -6,9 +6,7 @@ const includeHTML = (file) => {
         document.body.innerHTML += this.responseText;
         resolve();
       }
-      else{
-        reject();
-      }
+
     };
 
     xmlHttp.open("GET", file, true);
