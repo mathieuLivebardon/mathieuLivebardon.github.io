@@ -62,12 +62,15 @@
   </header>
 
   <script>
-
-    Promise.all(["./html/modals.html",
+    const htmlFiles = ["./html/modals.html",
       "./html/portfolio-grid.html",
       "./html/CV.html",
       "./html/contact.html",
-      "./html/footer.html"].map(includeHTML))
+      "./html/footer.html"]
+
+    htmlFiles.forEach(file => {
+      includeHTML(file);
+    });
 
   </script>
 
