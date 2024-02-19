@@ -1,9 +1,9 @@
 const includeHTML = (file) => {
   return new Promise((resolve,reject) => {
     const xmlHttp = new XMLHttpRequest();
-    xmlHttp.onreadystatechange = function () {
-      if (this.readyState == 4 && this.status == 200) {
-        document.body.innerHTML += this.responseText;
+    xmlHttp.onreadystatechange =  () => {
+      if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+        document.body.innerHTML += xmlHttp.responseText;
         resolve();
       }
 
