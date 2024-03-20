@@ -5,17 +5,13 @@ on:
     branches: ['main']
 
 jobs:
-  checkout:
+  sync:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v4
         with:
           ref: main
-  sync:
-    runs-on: ubuntu-latest
-    needs: checkout
-    steps:
       - name: Push subtree github-pages
         run: git subtree push --prefix public origin gh-pages
         
