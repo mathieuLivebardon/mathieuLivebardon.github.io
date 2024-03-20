@@ -13,5 +13,7 @@ jobs:
         with:
           ref: main
       - name: Push subtree github-pages
-        run: git subtree push --force --prefix public origin gh-pages
+        run: | 
+              git pull
+              git subtree push --prefix public origin gh-pages
         
